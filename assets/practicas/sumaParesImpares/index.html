@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de pares e impares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Validar suma de pares e impares</h1>
+    <form action="">
+        <div id="area"></div>
+         <button class="btn btn-success" type="button" onclick="serie()">EMPEZAR</button>
+
+    </form>
+
+    <script type="text/JavaScript">
+        function serie() {
+            let bandera = 0; // Apagada
+            let numero;
+            let sumaPar = 0;
+            let sumaImpar = 0;
+
+            while (bandera == 0) {
+                let numero = parseInt(prompt('Ingrese un número: '));
+
+                if (numero % 2 == 0){
+                    // El número es par
+                    sumaPar += numero;
+                    console.log(sumaPar)
+                } else {
+                    // Es impar
+                    sumaImpar += numero;
+                    console.log(sumaImpar)
+                }
+
+                if (numero == 0) {
+                    bandera = 1; // Encendida, termina
+                } else {
+                    bandera = 0; // Apagada, continua
+                }
+            }
+
+            // Imprimir resultado
+            document.getElementById('area').innerText = 'La suma de numeros pares es: ' + sumaPar + ' y la suma de impares es: ' + sumaImpar;
+        }
+    </script>
+</body>
+</html>

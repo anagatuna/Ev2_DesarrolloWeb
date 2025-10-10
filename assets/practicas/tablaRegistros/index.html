@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de registros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Tabla de registros</h1>
+    <form action="">
+        <div id="area"></div>
+         <button class="btn btn-success" type="button" onclick="dataGridView()">EMPEZAR</button>
+
+    </form>
+
+    <script type="text/JavaScript">
+        function dataGridView() {
+            let numero = parseInt(prompt('Ingrese un número de registros: '));
+            let nombre;
+            let i = 0;
+            let lista = '<table class = "table table-hover mt-4">';
+            
+            lista += '<tr><th>Id</th><th>Nombre</th><th></th></tr>';
+            
+            while (i < numero) {
+              nombre = prompt('Ingrese un nombre: ');
+              lista += '<tr><td>' + (i + 1) + '</td><td>' + nombre + '</td><td>' + '<button class="btn btn-danger">EDITAR</button> ' + '<button class="btn btn-info">ELIMINAR</button>' + '</td></tr>';
+              i++;
+            }
+        
+            lista += '</table><br>';
+            document.getElementById('area').innerHTML = lista;
+        }
+    </script>
+</body>
+</html>

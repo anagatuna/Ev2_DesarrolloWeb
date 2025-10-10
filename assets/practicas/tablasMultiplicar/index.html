@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Multiplicar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container border p-4 mt-5 rounded">
+        <h1>Tablas de Multiplicar</h1>
+            <section>
+                <h3>Estructura For</h3>
+                <form action="" autocomplete="off">
+                    <section class="row">
+                        <div class="col-4">
+                            <label for="txtNumero">Numero</label>
+                            <input id="txtNumero" type="number" name="txtNumero" placeholder="Obligatorio"class="form-control">
+                            <div id="resultado"></div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-success" type="button" onclick="tablaFor()">MOSTRAR TABLA</button>
+                            </div>
+                        </div>
+                    </section>
+            </section>
+
+            <script type="text/JavaScript">
+                function tablaFor() {
+                    // Declaración de variables y obtener los valores asignados
+                    let numero = parseInt(document.getElementById('txtNumero').value);
+                    let lista = '<table class = "table table-hover mt-4">';
+                    let resultado;
+                    
+                    for (let i = 1; i <= 10; i++) {
+                        resultado = numero * i;
+                        lista += '<tr><td>' + numero + ' x ' + i + ' = ' + resultado + '</td></tr>';
+                    }
+                
+                    lista += '</table>';
+                    document.getElementById('resultado').innerHTML = lista;
+                }
+            </script>
+        </form>
+    </main>
+</body>
+
+</html>
