@@ -122,3 +122,75 @@ h2 {
   font-size: 1rem;
   margin: 10px 0 0;
 }
+
+ :root {
+    --bg: #fff;
+    --border: #e6e6e6;
+    --shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    --radius: 10px;
+  }
+
+  .relevantes {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  .relevantes h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .accordion-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 0.9rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .accordion-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 1rem 3rem 1rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s ease;
+  }
+
+  .accordion-header:hover {
+    background: #f8f8f8;
+  }
+
+  .accordion-header .icon {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1rem;
+  }
+
+  .accordion-content p {
+    color: #333;
+    line-height: 1.55;
+  }
+
+  .accordion-item.active .accordion-header .icon {
+    transform: rotate(45deg);
+  }
