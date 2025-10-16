@@ -131,89 +131,57 @@ h2 {
 }
 
 /* Aspectos relevantes */
- :root {
-    --bg: #fff;
-    --border: #e6e6e6;
-    --shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-    --radius: 10px;
-  }
+.accordion-item {
+  background: #fff;
+  border: 2px solid #323232 !important;
+  box-shadow: 4px 4px #323232;
+  border-radius: 5px !important;
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
-  .relevantes {
-    max-width: 720px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  }
+.accordion-button {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
+  transition: background 0.2s ease;
+  background: none;
+  box-shadow: none !important;
+  color: #000;
+}
 
-  .relevantes h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
+.accordion-button:hover {
+  background: #f8f8f8;
+}
 
-  .accordion-item {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    margin-bottom: 0.9rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #f8f8f8;
+}
 
-  .accordion-header {
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 1rem 3rem 1rem 1rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: background 0.2s ease;
-  }
+.accordion-body {
+  color: #333;
+  line-height: 1.55;
+  padding: 1rem;
+}
 
-  .accordion-header:hover {
-    background: #f8f8f8;
-  }
-
-  .accordion-header .icon {
-    position: absolute;
-    right: 1rem;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .accordion-content {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    padding: 0 1rem;
-  }
-
-  .accordion-content p {
-    color: #333;
-    line-height: 1.55;
-  }
-
-  .accordion-item.active .accordion-header .icon {
-    transform: rotate(45deg);
-  }
+.accordion-button::after {
+  filter: invert(0);
+}
 
 /* Enlaces externos */
 .card-enlaces {
- width: 190px;
- height: 254px;
- border-radius: 20px;
- background: #f5f5f5;
- position: relative;
- padding: 1.8rem;
- border: 2px solid #c3c6ce;
- transition: 0.5s ease-out;
- overflow: visible;
+  width: 200px;
+  height: 220px;  
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  border-radius: 5px;
 }
 
 .card-details {

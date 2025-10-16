@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <!-- Referencia Estilos de Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Referencia Estilos de CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Referencia JavaScript de Boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <!--  Referencia a Nuestro JavaScript -->
     <script src="assets/js/aspectosRelevantes.js"></script>
 </head>
@@ -206,33 +209,38 @@
         <!-- Aspectos relevantes -->
         <section id="aspectos" class="my-5">
             <h2>Aspectos Relevantes</h2>
-            <div class="accordion">
+            <div class="accordion accordion-flush" id="accordionAspectos">
+                <!-- Ítem 1 -->
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="expandirAspectos()">
-                        ¿Ofrecen envíos internacionales?
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                            ¿Ofrecen envíos internacionales?
+                        </button>
+                    </h2>
+                    <div id="collapseUno" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                        <div class="accordion-body">
                             Sí, enviamos a la mayoría de los países. Las tarifas y tiempos de entrega se calculan al
                             finalizar la compra según tu ubicación.
-                        </p>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Ítem 2 -->
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="expandirAspectos()">
-                        ¿Puedo cambiar mi pedido?
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                            ¿Puedo cambiar mi pedido?
+                        </button>
+                    </h2>
+                    <div id="collapseDos" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+                        <div class="accordion-body">
                             Puedes solicitar cambios dentro de las primeras 24 horas tras realizar la compra.
                             Contáctanos con tu número de pedido.
-                        </p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <!-- Enlaces externos -->
