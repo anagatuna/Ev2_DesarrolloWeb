@@ -39,23 +39,40 @@ function generarCampos() {
 function calcularPromedio() {
     const listaDeCampos = document.querySelectorAll(".calificacion");
 
+    let sumaTotal = 0;
+
     for (const campo of listaDeCampos) {
         if (campo.value.trim() === "") {
             alert("Por favor, llena todos los campos de calificación.");
 
             return;
         }
+
+        const valorNumero = parseFloat(campo.value);
+
+        if (valorNumero < 0 || valorNumero > 100) {
+            alert("Error: Solo se permiten calificaciones entre 0 y 100.");
+            return;
+        }
+
+        sumaTotal += valorNumero || 0;
     }
 
-    let sumaTotal = 0;
-
-    for (const campo of listaDeCampos){
-        sumaTotal += parseFloat(campo.value) || 0;
-    }
     const promedio = sumaTotal / listaDeCampos.length;
     
     const pResultado = document.getElementById("pResultado");
     const spanResultado = document.getElementById("resultado");
+
+    pResultado.classList.remove('alert-success', 'alert-danger', 'alert-info');
+
+    if (promedio < 70) {
+        pResultado.textContent = `Promedio: ${promedio.toFixed(2)}. Has reprobado.`;
+        pResultado.classList.add('alert-danger');
+    } else {
+        pResultado.textContent = `Promedio: ${promedio.toFixed(2)}. ¡Felicidades, has aprobado!`;
+        pResultado.classList.add('alert-success');
+    }
+
     pResultado.style.display = "block";
     spanResultado.textContent = promedio.toFixed(2);
 
