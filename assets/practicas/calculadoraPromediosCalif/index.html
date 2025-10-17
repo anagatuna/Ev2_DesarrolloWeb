@@ -3,78 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link src="calculoPromedio.js" />
     <title>Calcular promedios</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <form action="" autocomplete="off">
-      <fieldset>
-        <legend>
-          Ingrese la cantidad de calificaciones que desea promediar:
-        </legend>
-        <label for="txtCantidadCalificaciones">Cantidad: </label>
-        <input
-          type="number"
-          name="txtCantidadCalificaciones"
-          id="txtCantidadCalificaciones"
-          min="1"
-        />
-        <button type="button" id="btnGenerar" onclick="generarCampos()">
-          Generar campos
-        </button>
-      </fieldset>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
 
-      <div id="contenedorCalificaciones"></div>
+          <form action="" autocomplete="off">
+            <fieldset>
+              <h3 class="card-title mb-4">Calculadora de Promedios</h3>
+              <div class="mb-3">
+                <label for="txtCantidadCalificaciones" class="form-label"
+                  >¿Cuántas calificaciones quieres promediar?</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="txtCantidadCalificaciones"
+                  min="1"
+                />
+              </div>
+              <div class="text-center">
+                <button
+                  type="button"
+                  id="btnGenerar"
+                  class="btn btn-primary"
+                  onclick="generarCampos()"
+                >
+                  Generar campos
+                </button>
+              </div>
 
-      <button type="button" id="btnCalcular" onclick="calcularPromedio()">
-        Calcular promedio
-      </button>
+              <div id="contenedorCalificaciones"></div>
 
-      <p>El promedio es: <strong id="resultado"></strong></p>
-    </form>
+              <br />
 
-    <script src="calculoPromedio.js">
-              const inputCantidad = document.getElementById("txtCantidadCalificaciones");
-      const btnGenerar = document.getElementById("btnGenerar");
-      const contenedor = document.getElementById("contenedorCalificaciones");
-      const btnCalcular = document.getElementById("btnCalcular");
-      const spanResultado = document.getElementById("resultado");
+              <button
+                type="button"
+                id="btnCalcular"
+                class="btn btn-success mt-3"
+                onclick="calcularPromedio()"
+              >
+                Calcular promedio
+              </button>
 
-      function generarCampos() {
-          let cantidad = parseInt(inputCantidad.value);
-
-          contenedor.innerHTML="";
-
-          for (let i=0; i < cantidad; i++){
-              const nuevoCampo = document.createElement("input");
-
-              document.createElement("input");
-              nuevoCampo.type="number";
-              nuevoCampo.className="calificacion";
-              nuevoCampo.placeholder="Calificación #" + (i + 1);
-              contenedor.appendChild(nuevoCampo)
-          }
-
-          btnCalcular.style.display = "block";
-
-          console.log("¡Función para generar campos activada!");
-      }
-
-      function calcularPromedio() {
-          const listaDeCampos = document.querySelectorAll(".calificacion");
-
-          let sumaTotal = 0;
-
-          for (const campo of listaDeCampos){
-              sumaTotal += parseFloat(campo.value);
-          }
-          const promedio = sumaTotal / listaDeCampos.length;
-
-          const spanResultado = document.getElementById("resultado");
-          spanResultado.textContent = promedio.toFixed(2);
-
-          console.log("¡Función para calcular activada!");
-      }
-    </script>
+              <div id="pResultado" class="alert alert-info mt-4" role="alert">
+                El promedio es: <strong id="resultado"></strong>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="calculoPromedio.js"></script>
   </body>
 </html>
