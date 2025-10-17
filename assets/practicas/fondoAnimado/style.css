@@ -1,84 +1,77 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: radial-gradient(#333, #000);
+/* ===== Reset & base ===== */
+* { box-sizing: border-box; }
+body{
+  margin:0; padding:0; overflow:hidden;
+  background: radial-gradient(#333,#000);
   color: slategray;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
 }
-
-section {
-  position: absolute;
-  inset: 0;
+section{ position:absolute; inset:0; }
+h2{
+  position:absolute; top:40%; left:50%; transform:translate(-50%,-50%);
+  font-size:clamp(2rem,6vw,4rem); font-weight:700; text-align:center;
 }
 
-h2 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 700;
-  text-align: center;
+/* ===== Capas ===== */
+.pusheen-layer,.pusheen-layer1,.pusheen-layer2{
+  position:absolute; inset:0; pointer-events:none;
+}
+.pusheen-layer div,
+.pusheen-layer1 div,
+.pusheen-layer2 div{
+  position:absolute; display:block;
 }
 
-/* --- Capas de Pusheen --- */
-.pusheen-layer,
-.pusheen-layer1,
-.pusheen-layer2 {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+/* Tamaño base (unificado) */
+.pusheen-layer img,
+.pusheen-layer1 img,
+.pusheen-layer2 img{
+  width:80px; height:80px; object-fit:contain; background:transparent;
+  /* zoom selectivo por archivo */
+  transform: scale(var(--zoom,1));
+  transform-origin:center;
+}
+/* Los que salían pequeños (3 y 7) */
+img[src*="pusheen-3"]{ --zoom:1.45; }
+img[src*="pusheen-7"]{ --zoom:1.45; }
+
+/* ===== Columnas por capa (no se pisan entre sí) ===== */
+/* Capa 1 */
+.pusheen-layer   div:nth-child(1){ left: 6%;  animation: fall 15s linear infinite; animation-delay:-2s; }
+.pusheen-layer   div:nth-child(2){ left: 20%; animation: fall 17s linear infinite; animation-delay:-4s; }
+.pusheen-layer   div:nth-child(3){ left: 34%; animation: fall 19s linear infinite; animation-delay:-6s; }
+.pusheen-layer   div:nth-child(4){ left: 48%; animation: fall 16s linear infinite; animation-delay:-3s; }
+.pusheen-layer   div:nth-child(5){ left: 62%; animation: fall 20s linear infinite; animation-delay:-5s; }
+.pusheen-layer   div:nth-child(6){ left: 76%; animation: fall 18s linear infinite; animation-delay:-8s; }
+.pusheen-layer   div:nth-child(7){ left: 90%; animation: fall 14s linear infinite; animation-delay:-7s; }
+
+/* Capa 2 */
+.pusheen-layer1{ transform: rotateX(180deg); }
+.pusheen-layer1 div:nth-child(1){ left:12%; animation: fall 18s linear infinite; animation-delay:-1s; }
+.pusheen-layer1 div:nth-child(2){ left:27%; animation: fall 16s linear infinite; animation-delay:-3s; }
+.pusheen-layer1 div:nth-child(3){ left:41%; animation: fall 20s linear infinite; animation-delay:-5s; }
+.pusheen-layer1 div:nth-child(4){ left:55%; animation: fall 17s linear infinite; animation-delay:-2s; }
+.pusheen-layer1 div:nth-child(5){ left:69%; animation: fall 19s linear infinite; animation-delay:-6s; }
+.pusheen-layer1 div:nth-child(6){ left:83%; animation: fall 15s linear infinite; animation-delay:-4s; }
+.pusheen-layer1 div:nth-child(7){ left:97%; animation: fall 21s linear infinite; animation-delay:-7s; }
+
+/* Capa 3 */
+.pusheen-layer2 div:nth-child(1){ left: 3%;  animation: fall 17s linear infinite; animation-delay:-2s; }
+.pusheen-layer2 div:nth-child(2){ left:18%;  animation: fall 19s linear infinite; animation-delay:-5s; }
+.pusheen-layer2 div:nth-child(3){ left:32%;  animation: fall 16s linear infinite; animation-delay:-1s; }
+.pusheen-layer2 div:nth-child(4){ left:46%;  animation: fall 21s linear infinite; animation-delay:-6s; }
+.pusheen-layer2 div:nth-child(5){ left:60%;  animation: fall 18s linear infinite; animation-delay:-3s; }
+.pusheen-layer2 div:nth-child(6){ left:74%;  animation: fall 20s linear infinite; animation-delay:-4s; }
+.pusheen-layer2 div:nth-child(7){ left:88%;  animation: fall 15s linear infinite; animation-delay:-7s; }
+
+/* ===== Animación (única) ===== */
+@keyframes fall{
+  0%   { opacity:1; top:-10%; transform:translateX(18px) rotate(0deg); }
+  25%  { transform:translateX(-28px) rotate(60deg); }
+  50%  { transform:translateX(10px)  rotate(120deg); }
+  75%  { transform:translateX(-22px) rotate(180deg); }
+  100% { opacity:1; top:110%; transform:translateX(0) rotate(240deg); }
 }
 
-.pusheen-layer div {
-  position: absolute;
-  display: block;
-}
-
-/* Tamaño y aspecto */
-.pusheen-layer img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  background: transparent;
-}
-
-/* Posiciones horizontales más distribuidas */
-.pusheen-layer div:nth-child(1) { left: 10%; animation: fall 15s linear infinite; animation-delay: -2s; }
-.pusheen-layer div:nth-child(2) { left: 30%; animation: fall 17s linear infinite; animation-delay: -4s; }
-.pusheen-layer div:nth-child(3) { left: 50%; animation: fall 19s linear infinite; animation-delay: -6s; }
-.pusheen-layer div:nth-child(4) { left: 70%; animation: fall 16s linear infinite; animation-delay: -3s; }
-.pusheen-layer div:nth-child(5) { left: 85%; animation: fall 20s linear infinite; animation-delay: -5s; }
-.pusheen-layer div:nth-child(6) { left: 40%; animation: fall 18s linear infinite; animation-delay: -8s; }
-.pusheen-layer div:nth-child(7) { left: 95%; animation: fall 14s linear infinite; animation-delay: -7s; }
-
-.pusheen-layer1 {
-  transform: rotateX(180deg);
-}
-
-/* Animación */
-@keyframes fall {
-  0% {
-    opacity: 1;
-    top: -10%;
-    transform: translateX(20px) rotate(0deg) scale(1);
-  }
-  25% { transform: translateX(-30px) rotate(60deg) scale(1.1); }
-  50% { transform: translateX(10px) rotate(120deg) scale(0.9); }
-  75% { transform: translateX(-25px) rotate(180deg) scale(1.05); }
-  100% {
-    opacity: 1;
-    top: 110%;
-    transform: translateX(0px) rotate(240deg) scale(1);
-  }
-}
-
-/* Opcional: si tus PNG no son realmente transparentes */
-.fake-transparent img {
-  mix-blend-mode: multiply;
-}
+/* Si tus PNG no son realmente transparentes */
+.fake-transparent img{ mix-blend-mode:multiply; }
