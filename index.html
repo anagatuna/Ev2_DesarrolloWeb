@@ -165,9 +165,9 @@
                                 data-bs-target="#code-tipos">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-tipos">
                                 <pre class="bg-light p-3 rounded"><code>let nombre = "Ana";   // string
-let edad = 30;        // number
-let activo = true;    // boolean
-let persona = { nombre: "Ana", edad: 30 }; // object</code></pre>
+                                    let edad = 30;        // number
+                                    let activo = true;    // boolean
+                                    let persona = { nombre: "Ana", edad: 30 }; // object</code></pre>
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ let persona = { nombre: "Ana", edad: 30 }; // object</code></pre>
                                 data-bs-target="#code-vars">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-vars">
                                 <pre class="bg-light p-3 rounded"><code>let contador = 1;
-const PI = 3.1416;</code></pre>
+                                const PI = 3.1416;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -204,8 +204,8 @@ const PI = 3.1416;</code></pre>
                                 data-bs-target="#code-op">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-op">
                                 <pre class="bg-light p-3 rounded"><code>let suma = 5 + 3;
-let igual = (10 === "10"); // false
-let logico = true && false; // false</code></pre>
+                                let igual = (10 === "10"); // false
+                                let logico = true && false; // false</code></pre>
                             </div>
                         </div>
                     </div>
@@ -224,10 +224,10 @@ let logico = true && false; // false</code></pre>
                                 data-bs-target="#code-control">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-control">
                                 <pre class="bg-light p-3 rounded"><code>if (edad >= 18) {
-  console.log("Mayor de edad");
-} else {
-  console.log("Menor de edad");
-}</code></pre>
+                                  console.log("Mayor de edad");
+                                } else {
+                                  console.log("Menor de edad");
+                                }</code></pre>
                             </div>
                         </div>
                     </div>
@@ -245,10 +245,10 @@ let logico = true && false; // false</code></pre>
                                 data-bs-target="#code-func">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-func">
                                 <pre class="bg-light p-3 rounded"><code>function saludar(nombre) {
-  return "Hola " + nombre;
-}
+                                      return "Hola " + nombre;
+                                    }
 
-const despedir = (nombre) => "Adiós " + nombre;</code></pre>
+                                    const despedir = (nombre) => "Adiós " + nombre;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@ const despedir = (nombre) => "Adiós " + nombre;</code></pre>
                                 data-bs-target="#code-arr">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-arr">
                                 <pre class="bg-light p-3 rounded"><code>const numeros = [1, 2, 3, 4];
-const dobles = numeros.map(n => n * 2);</code></pre>
+                                    const dobles = numeros.map(n => n * 2);</code></pre>
                             </div>
                         </div>
                     </div>
@@ -285,10 +285,10 @@ const dobles = numeros.map(n => n * 2);</code></pre>
                                 data-bs-target="#code-obj">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-obj">
                                 <pre class="bg-light p-3 rounded"><code>const persona = {
-  nombre: "Ana",
-  edad: 25,
-  saludar() { return "Hola " + this.nombre; }
-};</code></pre>
+                                  nombre: "Ana",
+                                  edad: 25,
+                                  saludar() { return "Hola " + this.nombre; }
+                                };</code></pre>
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@ const dobles = numeros.map(n => n * 2);</code></pre>
                                 data-bs-target="#code-dom">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-dom">
                                 <pre class="bg-light p-3 rounded"><code>document.querySelector("#btn")
-  .addEventListener("click", () => alert("Hola!"));</code></pre>
+                                .addEventListener("click", () => alert("Hola!"));</code></pre>
                             </div>
                         </div>
                     </div>
@@ -324,10 +324,10 @@ const dobles = numeros.map(n => n * 2);</code></pre>
                                 data-bs-target="#code-async">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-async">
                                 <pre class="bg-light p-3 rounded"><code>async function obtenerDatos() {
-  const res = await fetch("/api");
-  const data = await res.json();
-  console.log(data);
-}</code></pre>
+                                  const res = await fetch("/api");
+                                  const data = await res.json();
+                                  console.log(data);
+                                }</code></pre>
                             </div>
                         </div>
                     </div>
@@ -346,10 +346,10 @@ const dobles = numeros.map(n => n * 2);</code></pre>
                                 data-bs-target="#code-mod">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-mod">
                                 <pre class="bg-light p-3 rounded"><code>// math.js
-export const suma = (a, b) => a + b;
+                                export const suma = (a, b) => a + b;
 
-// main.js
-import { suma } from './math.js';</code></pre>
+                                // main.js
+                                import { suma } from './math.js';</code></pre>
                             </div>
                         </div>
                     </div>
@@ -367,10 +367,10 @@ import { suma } from './math.js';</code></pre>
                                 data-bs-target="#code-err">Ver ejemplo</button>
                             <div class="collapse mt-2" id="code-err">
                                 <pre class="bg-light p-3 rounded"><code>try {
-  throw new Error("Algo salió mal");
-} catch (e) {
-  console.error(e.message);
-}</code></pre>
+                                      throw new Error("Algo salió mal");
+                                    } catch (e) {
+                                      console.error(e.message);
+                                    }</code></pre>
                             </div>
                         </div>
                     </div>
