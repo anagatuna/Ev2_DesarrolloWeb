@@ -45,8 +45,8 @@
                                         target="_blank">Calculadora de operaciones básicas</a></li>
                                 <li><a class="dropdown-item" href="assets/practicas/tablasMultiplicar/"
                                         target="_blank">Tablas de multiplicar</a></li>
-                                <li><a class="dropdown-item" href="assets/practicas/tipoTriangulo/" 
-                                        target="_blank">Tipo de triangulo según sus lados</a></li>
+                                <li><a class="dropdown-item" href="assets/practicas/tipoTriangulo/" target="_blank">Tipo
+                                        de triangulo según sus lados</a></li>
                                 <li><a class="dropdown-item" href="assets/practicas/sumaParesImpares/"
                                         target="_blank">Validar suma de pares e impares</a></li>
                                 <li><a class="dropdown-item" href="assets/practicas/tablaRegistros/"
@@ -59,10 +59,10 @@
                                         target="_blank">Calculadora de sistemas numéricos</a></li>
                                 <li><a class="dropdown-item" href="assets/practicas/calculadoraPromediosCalif/"
                                         target="_blank">Calculadora de promedios y calificaciones</a></li>
-                                <li><a class="dropdown-item" href="assets/practicas/loader/"
-                                        target="_blank">Loader</a></li>
-                                <li><a class="dropdown-item" href="assets/practicas/fondoAnimado/"
-                                        target="_blank">Fondo Animado</a></li>
+                                <li><a class="dropdown-item" href="assets/practicas/loader/" target="_blank">Loader</a>
+                                </li>
+                                <li><a class="dropdown-item" href="assets/practicas/fondoAnimado/" target="_blank">Fondo
+                                        Animado</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -146,40 +146,238 @@
             </div>
         </section>
 
-        <!-- Elementos fundamentales -->
-        <section id="elementos" class="my-5">
-            <h2>Elementos fundamentales</h2>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>@social</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Elementos Fundamentales -->
+        <section id="elementos" class="my-5 container">
+            <h2 class="mb-4 text-center ">Elementos Fundamentales de JavaScript</h2>
+
+            <div class="row g-3">
+                <!-- Tipos de datos -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Tipos de datos</h5>
+                            <p class="card-text small mb-2">
+                                JavaScript tiene tipos de datos primitivos (<strong>string, number, boolean, null,
+                                    undefined, symbol, bigint</strong>)
+                                y de referencia (<strong>object</strong>).
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-tipos">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-tipos">
+                                <pre class="bg-light p-3 rounded"><code>let nombre = "Ana";   // string
+let edad = 30;        // number
+let activo = true;    // boolean
+let persona = { nombre: "Ana", edad: 30 }; // object</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variables -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Variables</h5>
+                            <p class="card-text small mb-2">
+                                Se declaran con <strong>var</strong>, <strong>let</strong> o <strong>const</strong>.
+                                Usa <strong>let</strong> y <strong>const</strong> para un código más seguro.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-vars">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-vars">
+                                <pre class="bg-light p-3 rounded"><code>let contador = 1;
+const PI = 3.1416;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operadores -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Operadores</h5>
+                            <p class="card-text small mb-2">
+                                Permiten realizar operaciones matemáticas, lógicas y de comparación.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-op">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-op">
+                                <pre class="bg-light p-3 rounded"><code>let suma = 5 + 3;
+let igual = (10 === "10"); // false
+let logico = true && false; // false</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estructuras de control -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Estructuras de control</h5>
+                            <p class="card-text small mb-2">
+                                Permiten tomar decisiones o repetir bloques de código: <strong>if</strong>,
+                                <strong>for</strong>, <strong>while</strong>.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-control">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-control">
+                                <pre class="bg-light p-3 rounded"><code>if (edad >= 18) {
+  console.log("Mayor de edad");
+} else {
+  console.log("Menor de edad");
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funciones -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Funciones</h5>
+                            <p class="card-text small mb-2">
+                                Bloques reutilizables de código que pueden recibir parámetros y devolver valores.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-func">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-func">
+                                <pre class="bg-light p-3 rounded"><code>function saludar(nombre) {
+  return "Hola " + nombre;
+}
+
+const despedir = (nombre) => "Adiós " + nombre;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrays -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Arrays</h5>
+                            <p class="card-text small mb-2">
+                                Colecciones ordenadas de valores.
+                                Pueden recorrer, filtrar o transformar datos fácilmente.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-arr">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-arr">
+                                <pre class="bg-light p-3 rounded"><code>const numeros = [1, 2, 3, 4];
+const dobles = numeros.map(n => n * 2);</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objetos -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Objetos</h5>
+                            <p class="card-text small mb-2">
+                                Agrupan propiedades y métodos en una sola estructura para representar entidades.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-obj">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-obj">
+                                <pre class="bg-light p-3 rounded"><code>const persona = {
+  nombre: "Ana",
+  edad: 25,
+  saludar() { return "Hola " + this.nombre; }
+};</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOM -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">DOM y eventos</h5>
+                            <p class="card-text small mb-2">
+                                Permiten manipular elementos HTML y escuchar eventos del usuario.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-dom">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-dom">
+                                <pre class="bg-light p-3 rounded"><code>document.querySelector("#btn")
+  .addEventListener("click", () => alert("Hola!"));</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promesas -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Asincronía y Promesas</h5>
+                            <p class="card-text small mb-2">
+                                Manejan procesos que tardan tiempo, como consultas a APIs, sin bloquear la ejecución.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-async">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-async">
+                                <pre class="bg-light p-3 rounded"><code>async function obtenerDatos() {
+  const res = await fetch("/api");
+  const data = await res.json();
+  console.log(data);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Módulos -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Módulos</h5>
+                            <p class="card-text small mb-2">
+                                Dividen el código en archivos reutilizables mediante <code>export</code> e
+                                <code>import</code>.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-mod">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-mod">
+                                <pre class="bg-light p-3 rounded"><code>// math.js
+export const suma = (a, b) => a + b;
+
+// main.js
+import { suma } from './math.js';</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Errores -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Manejo de errores</h5>
+                            <p class="card-text small mb-2">
+                                Usa <code>try...catch</code> para capturar errores y evitar que el programa se detenga.
+                            </p>
+                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
+                                data-bs-target="#code-err">Ver ejemplo</button>
+                            <div class="collapse mt-2" id="code-err">
+                                <pre class="bg-light p-3 rounded"><code>try {
+  throw new Error("Algo salió mal");
+} catch (e) {
+  console.error(e.message);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Principales aplicaciones -->
         <section id="aplicaciones" class="my-5">
