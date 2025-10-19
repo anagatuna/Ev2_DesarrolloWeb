@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo</title>
+
+</head>
+
+<body style="background-color: #a8dadc;">
+    <div class="container">
+        <form autocomplete="off">
+            <h1>Tipos de Triángulos</h1>
+            <h2>¡Aprende que tipo de triángulo tienes!</h2>
+            <ul>
+                <li>
+                    <p>Si los <b>3 lados</b> de tu triángulo son <b>iguales</b> = <b><u>EQUILATERO</u></b></p>
+                </li>
+                <li>
+                    <p>Si <b>2 lados</b> son <b>iguales</b> y <b>1 diferente</b> = <b><u>ESCALENO</u></b></p>
+                </li>
+                <li>
+                    <p>Si los <b>3 lados</b> de tu triángulo son <b>diferentes</b> = <b><u>ISÓSCELES</u></b></p>
+                </li>
+            </ul>
+
+            <fieldset style="background-color: #ffffff;">
+                <legend>
+                    <h4>TAMAÑO DE LOS LADOS</h4>
+                </legend>
+                <label for="txtLado1">Lado 1:</label>
+                <input id="txtLado1" type="number" name="txtLado1" placeholder="Obligatorio" required>
+                <br><br>
+                <label for="txtLado2">Lado 2:</label>
+                <input id="txtLado2" type="number" name="txtLado2" placeholder="Obligatorio" required>
+                <br><br>
+                <label for="txtLado3">Lado 3:</label>
+                <input id="txtLado3" type="number" name="txtLado3" placeholder="Obligatorio" required>
+                <br><br>
+
+                <button class="btn btn-success" type="button" onclick="calcularTriangulo()">CALCULAR</button>
+                <button type="reset">LIMPIAR</button>
+
+            </fieldset>
+
+            <!--EJECUCION DE FUNCION-->
+            <script type="text/JavaScript">
+                function calcularTriangulo() {
+                    //Declaración de variables
+                    let lado1, lado2, lado3, resultado;
+
+                    //Obtener los valores y asignarlos a las variables
+                    lado1 = parseFloat(document.getElementById('txtLado1').value);
+                    lado2 = parseFloat(document.getElementById('txtLado2').value);
+                    lado3 = parseFloat(document.getElementById('txtLado3').value);
+
+                    //Validar que se hayan ingresado datos
+                    if (isNaN(lado1) || isNaN(lado2) || isNaN(lado3)) {
+                        alert("Ingresa todos lados del triángulo.");
+                        return;
+                    }
+                    
+                    //Validar que los lados sean números positivos
+                    if (lado1 <= 0 || lado2 <=0 || lado3 <= 0) {
+                        alert("Todos los lados deben ser números positivos.");
+                        return;
+                    }
+
+                    //Validacion que formen un triangulo los 3 lados (la suma de 2 lados > al 3er lado)
+                    if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
+                        alert("Los lados NO forman un triángulo. La suma de 2 lados tiene que ser mayor al tercer lado.");
+                    return;
+                    }
+
+                    //Calcular triangulo
+                    if (lado1 === lado2 && lado2 === lado3) {
+                        resultado = "El triangulo es EQUILÁTERO";
+                    } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                        resultado = "El triángulo es ISÓSCELES";
+                    } else {
+                        resultado = "El triángulo es ESCALENO";
+                    }
+
+                    // Imprimir el resultado
+                    alert(resultado);
+                }
+
+            </script>
+</body>
+
+</html>
