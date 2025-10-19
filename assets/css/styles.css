@@ -65,10 +65,74 @@ h2 {
 }
 
 /* Elementos fundamentales */
-.table {
+#elementos .list-group {
+  background: #fff;
   border: 2px solid #323232;
   box-shadow: 4px 4px #323232;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+#elementos .list-group-item {
+  border: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+#elementos .list-group-item:hover {
+  background: #f8f8f8;
+}
+
+#elementos .list-group-item.active {
+  background-color: #4682b4;
+  color: #fff;
+}
+
+#elementos .tab-pane {
+  background: #fff;
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  border-radius: 5px;
+  padding: 1rem 1.25rem;
+}
+
+#elementos h4 {
+  margin-top: .3rem;
+  margin-bottom: .75rem;
+  font-weight: 700;
+}
+
+#elementos h5 {
+  margin-top: .75rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+/* Ajustes tipográficos ligeros dentro de la sección */
+#elementos p, 
+#elementos li {
+  color: #3c3c3c;
+  line-height: 1.55;
+}
+
+/* (Ya tienes este bloque global; lo dejamos igual.
+   Le sumo una versión compacta para cuando el code esté
+   dentro de la tarjeta blanca de #elementos) */
+#elementos pre code {
+  background-color: #f1f3f4;
+  color: #212529;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: block;
+  white-space: pre-wrap;
+  margin: .5rem 0 1rem 0;
+  line-height: 1.4;
+  font-size: .9rem;
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+#elementos  code {
+  color: #4682b4;
 }
 
 /* Principales aplicaciones */
@@ -227,3 +291,9 @@ h2 {
  opacity: 1;
 }
 
+/* Ejercicios*/
+.table {
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  border-radius: 5px;
+}

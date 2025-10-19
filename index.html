@@ -148,236 +148,152 @@
 
         <!-- Elementos Fundamentales -->
         <section id="elementos" class="my-5 container">
-            <h2 class="mb-4 text-center ">Elementos Fundamentales de JavaScript</h2>
-
-            <div class="row g-3">
-                <!-- Tipos de datos -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Tipos de datos</h5>
-                            <p class="card-text small mb-2">
-                                JavaScript tiene tipos de datos primitivos (<strong>string, number, boolean, null,
-                                    undefined, symbol, bigint</strong>)
-                                y de referencia (<strong>object</strong>).
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-tipos">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-tipos">
-                                <pre class="bg-light p-3 rounded"><code>let nombre = "Ana";   // string
-                                    let edad = 30;        // number
-                                    let activo = true;    // boolean
-                                    let persona = { nombre: "Ana", edad: 30 }; // object</code></pre>
-                            </div>
-                        </div>
+            <h2 class="mb-4">Elementos Fundamentales</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-variables-list"
+                            data-bs-toggle="list" href="#list-variables" role="tab"
+                            aria-controls="list-variables">Variables</a>
+                        <a class="list-group-item list-group-item-action" id="list-datos-list" data-bs-toggle="list"
+                            href="#list-datos" role="tab" aria-controls="list-datos">Tipos de datos</a>
+                        <a class="list-group-item list-group-item-action" id="list-operadores-list"
+                            data-bs-toggle="list" href="#list-operadores" role="tab"
+                            aria-controls="list-operadores">Operadores</a>
+                        <a class="list-group-item list-group-item-action" id="list-control-list" data-bs-toggle="list"
+                            href="#list-control" role="tab" aria-controls="list-control">Estructuras de control</a>
+                        <a class="list-group-item list-group-item-action" id="list-funciones-list" data-bs-toggle="list"
+                            href="#list-funciones" role="tab" aria-controls="list-funciones">Funciones</a>
+                        <a class="list-group-item list-group-item-action" id="list-dom-list" data-bs-toggle="list"
+                            href="#list-dom" role="tab" aria-controls="list-dom">Eventos y elementos DOM</a>
                     </div>
                 </div>
 
-                <!-- Variables -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Variables</h5>
-                            <p class="card-text small mb-2">
-                                Se declaran con <strong>var</strong>, <strong>let</strong> o <strong>const</strong>.
-                                Usa <strong>let</strong> y <strong>const</strong> para un código más seguro.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-vars">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-vars">
-                                <pre class="bg-light p-3 rounded"><code>let contador = 1;
-                                const PI = 3.1416;</code></pre>
-                            </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- Variables -->
+                        <div class="tab-pane fade show active" id="list-variables" role="tabpanel"
+                            aria-labelledby="list-variables-list">
+                            <h4>Variables</h4>
+                            <p>Sirven para almacenar valores como números, texto, objetos, etc.</p>
+                            <pre><code>let nombre = "Chispi";   // variable que puede cambiar
+const PI = 3.1416;       // variable constante (no cambia)
+var edad = 25;           // es una forma antigua (evita usarla)</code></pre>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Operadores -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Operadores</h5>
-                            <p class="card-text small mb-2">
-                                Permiten realizar operaciones matemáticas, lógicas y de comparación.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-op">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-op">
-                                <pre class="bg-light p-3 rounded"><code>let suma = 5 + 3;
-                                let igual = (10 === "10"); // false
-                                let logico = true && false; // false</code></pre>
-                            </div>
+                        <!-- Tipos de datos -->
+                        <div class="tab-pane fade" id="list-datos" role="tabpanel" aria-labelledby="list-datos-list">
+                            <h4>Tipos de Datos</h4>
+                            <p>Los principales tipos de datos en JavaScript son:</p>
+                            <ul>
+                                <li><strong>Number:</strong> representa números, tanto enteros como decimales:
+                                    <code>42</code>, <code>3.14</code>
+                                </li>
+                                <li><strong>String:</strong> representa texto o cadenas de caracteres:
+                                    <code>"Hola, soy Chispi"</code>
+                                </li>
+                                <li><strong>Boolean:</strong> representa valores lógicos verdadero o falso:
+                                    <code>true</code>, <code>false</code>
+                                </li>
+                                <li><strong>Array:</strong> representa una lista o conjunto de elementos ordenados:
+                                    <code>[1, 2, 3]</code>
+                                </li>
+                                <li><strong>Object:</strong> representa una estructura de datos con pares
+                                    clave-valor:
+                                    <code>{nombre: "Chispi", edad: 9}</code>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Estructuras de control -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Estructuras de control</h5>
-                            <p class="card-text small mb-2">
-                                Permiten tomar decisiones o repetir bloques de código: <strong>if</strong>,
-                                <strong>for</strong>, <strong>while</strong>.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-control">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-control">
-                                <pre class="bg-light p-3 rounded"><code>if (edad >= 18) {
-                                  console.log("Mayor de edad");
-                                } else {
-                                  console.log("Menor de edad");
-                                }</code></pre>
-                            </div>
+                        <!-- Operadores -->
+                        <div class="tab-pane fade" id="list-operadores" role="tabpanel"
+                            aria-labelledby="list-operadores-list">
+                            <h4>Operadores</h4>
+                            <p>Permiten realizar operaciones matemáticas y lógicas.</p>
+                            <pre class="codigo-operadores"><code>let a = 10;
+let b = 5;
+
+console.log(a + b); // 15 (suma)
+console.log(a - b); // 5 (resta)
+console.log(a * b); // 50 (multiplicación)
+console.log(a / b); // 2 (división)
+console.log(a % b); // 0 (módulo)</code></pre>
+                            <h5>Operadores de comparación:</h5>
+                            <pre><code>a &gt; b      // true
+a == 10    // true
+a === "10" // false (por que tipo distinto)
+a != b     // true</code></pre>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Funciones -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Funciones</h5>
-                            <p class="card-text small mb-2">
-                                Bloques reutilizables de código que pueden recibir parámetros y devolver valores.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-func">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-func">
-                                <pre class="bg-light p-3 rounded"><code>function saludar(nombre) {
-                                      return "Hola " + nombre;
-                                    }
+                        <!-- Estructuras de control -->
+                        <div class="tab-pane fade" id="list-control" role="tabpanel"
+                            aria-labelledby="list-control-list">
+                            <h4>Estructuras de Control</h4>
+                            <p>Permiten tomar decisiones y repetir código.</p>
+                            <h5>Condicionales</h5>
+                            <pre><code>let edad = 18;
 
-                                    const despedir = (nombre) => "Adiós " + nombre;</code></pre>
-                            </div>
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}</code></pre>
+                            <h5>Bucles</h5>
+                            <pre><code>for (let i = 0; i &lt; 3; i++) {
+  console.log("Iteración " + i);
+}</code></pre>
+                            <pre><code>let n = 0;
+while (n &lt; 3) {
+  console.log("n vale " + n);
+  n++;
+}</code></pre>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Arrays -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Arrays</h5>
-                            <p class="card-text small mb-2">
-                                Colecciones ordenadas de valores.
-                                Pueden recorrer, filtrar o transformar datos fácilmente.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-arr">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-arr">
-                                <pre class="bg-light p-3 rounded"><code>const numeros = [1, 2, 3, 4];
-                                    const dobles = numeros.map(n => n * 2);</code></pre>
-                            </div>
+                        <!-- Funciones -->
+                        <div class="tab-pane fade" id="list-funciones" role="tabpanel"
+                            aria-labelledby="list-funciones-list">
+                            <h4>Funciones</h4>
+                            <p>Bloques de código que realizan una tarea específica.</p>
+                            <pre><code>function saludar(nombre) {
+    return "Hola " + nombre;
+}
+console.log(saludar("Chispi"));</code></pre>
+
                         </div>
-                    </div>
-                </div>
 
-                <!-- Objetos -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Objetos</h5>
-                            <p class="card-text small mb-2">
-                                Agrupan propiedades y métodos en una sola estructura para representar entidades.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-obj">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-obj">
-                                <pre class="bg-light p-3 rounded"><code>const persona = {
-                                  nombre: "Ana",
-                                  edad: 25,
-                                  saludar() { return "Hola " + this.nombre; }
-                                };</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <!-- Eventos y Elementos DOM -->
+                        <div class="tab-pane fade" id="list-dom" role="tabpanel" aria-labelledby="list-dom-list">
+                            <h4>Eventos y Elementos del DOM</h4>
+                            <p>Permiten interactuar con los elementos HTML de la página.</p>
+                            <h5>Acceder a elementos:</h5>
+                            <pre><code>// Por ID
+const titulo = document.getElementById("titulo");
 
-                <!-- DOM -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">DOM y eventos</h5>
-                            <p class="card-text small mb-2">
-                                Permiten manipular elementos HTML y escuchar eventos del usuario.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-dom">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-dom">
-                                <pre class="bg-light p-3 rounded"><code>document.querySelector("#btn")
-                                .addEventListener("click", () => alert("Hola!"));</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+// Por clase
+const notas = document.getElementsByClassName("nota");
 
-                <!-- Promesas -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Asincronía y Promesas</h5>
-                            <p class="card-text small mb-2">
-                                Manejan procesos que tardan tiempo, como consultas a APIs, sin bloquear la ejecución.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-async">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-async">
-                                <pre class="bg-light p-3 rounded"><code>async function obtenerDatos() {
-                                  const res = await fetch("/api");
-                                  const data = await res.json();
-                                  console.log(data);
-                                }</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+// Por etiqueta
+const parrafos = document.getElementsByTagName("p");
 
-                <!-- Módulos -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Módulos</h5>
-                            <p class="card-text small mb-2">
-                                Dividen el código en archivos reutilizables mediante <code>export</code> e
-                                <code>import</code>.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-mod">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-mod">
-                                <pre class="bg-light p-3 rounded"><code>// math.js
-                                export const suma = (a, b) => a + b;
+// Primer elemento que coincide con un selector
+const primero = document.querySelector(".mensaje");
 
-                                // main.js
-                                import { suma } from './math.js';</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+// Todos los que coinciden con un selector
+const items = document.querySelectorAll(".item");</code></pre>
 
-                <!-- Errores -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Manejo de errores</h5>
-                            <p class="card-text small mb-2">
-                                Usa <code>try...catch</code> para capturar errores y evitar que el programa se detenga.
-                            </p>
-                            <button class="btn btn-sm btn-link p-0" data-bs-toggle="collapse"
-                                data-bs-target="#code-err">Ver ejemplo</button>
-                            <div class="collapse mt-2" id="code-err">
-                                <pre class="bg-light p-3 rounded"><code>try {
-                                      throw new Error("Algo salió mal");
-                                    } catch (e) {
-                                      console.error(e.message);
-                                    }</code></pre>
-                            </div>
+                            <h5>Ejemplo de evento:</h5>
+                            <pre><code>&lt;button id="boton"&gt;Haz clic&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("boton").addEventListener("click", () =&gt; {
+  alert("¡Hiciste clic!");
+});
+&lt;/script&gt;</code></pre>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- Principales aplicaciones -->
         <section id="aplicaciones" class="my-5">
