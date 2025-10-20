@@ -26,6 +26,17 @@ p:hover {
   background-color: #ecf0f1;
 }
 
+button {
+  margin: 10px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* Estilo que se aplicará al hacer clic */
 .grande {
   font-size: 28px;
