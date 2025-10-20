@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="es" translate="no">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ipo de triangulo según sus lados</title>
+    <title>Triángulo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
-<body>
-    
+
+<body style="background-color: aquamarine;">
+
+    <div class="container mt-5 p-4 bg-white rounded shadow" style="max-width: 600px;">
+        <h1 class="text-center text-success mb-3">Tipos de Triángulos</h1>
+        <h5 class="text-center text-secondary mb-4">¡Aprende qué tipo de triángulo tienes!</h5>
+
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Si los <b>3 lados</b> son <b>iguales</b> = <b><u>EQUILÁTERO</u></b></li>
+            <li class="list-group-item">Si <b>2 lados</b> son <b>iguales</b> y <b>1 diferente</b> =
+                <b><u>ISÓSCELES</u></b>
+            </li>
+            <li class="list-group-item">Si los <b>3 lados</b> son <b>diferentes</b> = <b><u>ESCALENO</u></b></li>
+        </ul>
+
+        <form autocomplete="off">
+            <fieldset>
+                <legend>Tamaño de los lados</legend>
+
+                <div class="mb-3">
+                    <label for="txtLado1" class="form-label">Lado 1:</label>
+                    <input id="txtLado1" type="number" class="form-control" placeholder="Obligatorio" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtLado2" class="form-label">Lado 2:</label>
+                    <input id="txtLado2" type="number" class="form-control" placeholder="Obligatorio" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtLado3" class="form-label">Lado 3:</label>
+                    <input id="txtLado3" type="number" class="form-control" placeholder="Obligatorio" required>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button" onclick="calcularTriangulo()">Calcular</button>
+                    <button class="btn btn-secondary" type="reset">Limpiar</button>
+
+                    <a href="../../../index.html" class="btn btn-primary">Regresar a inicio</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <!--EJECUCION DE FUNCION-->
+    <script type="text/JavaScript">
+        function calcularTriangulo() {
+            //Declaración de variables
+            let lado1, lado2, lado3, resultado;
+
+            //Obtener los valores y asignarlos a las variables
+            lado1 = parseFloat(document.getElementById('txtLado1').value);
+            lado2 = parseFloat(document.getElementById('txtLado2').value);
+            lado3 = parseFloat(document.getElementById('txtLado3').value);
+
+            //Validar que se hayan ingresado datos
+            if (isNaN(lado1) || isNaN(lado2) || isNaN(lado3)) {
+                alert("Ingresa todos lados del triángulo.");
+                return;
+            }
+                    
+            //Validar que los lados sean números positivos
+            if (lado1 <= 0 || lado2 <=0 || lado3 <= 0) {
+                alert("Todos los lados deben ser números positivos.");
+                return;
+            }
+
+            //Validacion que formen un triangulo los 3 lados (la suma de 2 lados > al 3er lado)
+            if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
+                alert("Los lados NO forman un triángulo. La suma de 2 lados tiene que ser mayor al tercer lado.");
+                return;
+            }
+
+            //Calcular triangulo
+            if (lado1 === lado2 && lado2 === lado3) {
+                resultado = "El triangulo es EQUILÁTERO";
+            } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                resultado = "El triángulo es ISÓSCELES";
+            } else {
+                resultado = "El triángulo es ESCALENO";
+            }
+
+            // Imprimir el resultado
+            alert(resultado);
+        }
+
+    </script>
 </body>
+
 </html>

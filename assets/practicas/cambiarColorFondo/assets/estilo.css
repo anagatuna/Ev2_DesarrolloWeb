@@ -1,0 +1,19 @@
+body {
+    background-color: #4087ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.recuadro {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.selColor {
+    margin-top: 20px;
+}
