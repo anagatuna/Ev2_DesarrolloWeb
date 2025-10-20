@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 13</title>
+
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <h1>Práctica: Ocultar y mostrar un elemento</h1>
+
+  <!-- Imagen que se ocultará/mostrará -->
+  <img id="imagen" src="assets/img/logo-js.webp" alt="Logo de JavaScript">
+
+  <!-- Botón para mostrar/ocultar -->
+  <button id="toggle">Ocultar imagen</button>
+
+  <script>
+    const imagen = document.getElementById("imagen");
+    const botonToggle = document.getElementById("toggle");
+    const botonVolver = document.getElementById("volver");
+
+    botonToggle.addEventListener("click", function() {
+      // Si la imagen está visible, se oculta; si está oculta, se muestra
+      if (imagen.style.display === "none") {
+        imagen.style.display = "block";
+        botonToggle.textContent = "Ocultar imagen";
+      } else {
+        imagen.style.display = "none";
+        botonToggle.textContent = "Mostrar imagen";
+      }
+    });
+
+  </script>
+
+</body>
+</html>
