@@ -3,8 +3,10 @@ const btnGenerar = document.getElementById("btnGenerar");
 const contenedor = document.getElementById("contenedorCalificaciones");
 const btnCalcular = document.getElementById("btnCalcular");
 const spanResultado = document.getElementById("resultado");
+const btnReset = document.getElementById("btnReset");
 btnCalcular.style.display = 'none';
 pResultado.style.display = 'none';
+btnReset.style.display = 'none';
 
 function generarCampos() {
     let cantidad = parseInt(inputCantidad.value);
@@ -29,11 +31,16 @@ function generarCampos() {
     }
 
     btnCalcular.style.display = "block";
+    btnReset.style.display = "block";
 
     console.log("¡Función para generar campos activada!");
     } else{
         alert("No se permiten valores menores a 1. Por favor, ingresa un dato válido.")
     }
+}
+
+function reiniciarPagina() {
+  location.reload();
 }
 
 function calcularPromedio() {
@@ -66,10 +73,10 @@ function calcularPromedio() {
     pResultado.classList.remove('alert-success', 'alert-danger', 'alert-info');
 
     if (promedio < 70) {
-        pResultado.textContent = `Promedio: ${promedio.toFixed(2)}. Has reprobado.`;
+        pResultado.textContent = `Promedio: ${promedio.toFixed(2)} Has reprobado.`;
         pResultado.classList.add('alert-danger');
     } else {
-        pResultado.textContent = `Promedio: ${promedio.toFixed(2)}. ¡Felicidades, has aprobado!`;
+        pResultado.textContent = `Promedio: ${promedio.toFixed(2)} ¡Felicidades, has aprobado!`;
         pResultado.classList.add('alert-success');
     }
 

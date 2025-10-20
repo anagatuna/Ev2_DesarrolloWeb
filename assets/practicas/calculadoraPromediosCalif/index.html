@@ -17,7 +17,7 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
 
-          <button class="btn btn-primary"><a href="/index.html">Regresar a Menú Principal</a></button>
+          <button class="btn btn-info m-3"><a href="/index.html">Regresar a Menú Principal</a></button>
           <form action="" autocomplete="off">
             <fieldset>
               <h3 class="card-title mb-4">Calculadora de Promedios</h3>
@@ -43,7 +43,9 @@
                 </button>
               </div>
 
-              <div id="contenedorCalificaciones"></div>
+              <br>
+
+              <div id="contenedorCalificaciones" class="text-center"></div>
 
               <br />
 
@@ -54,6 +56,15 @@
                 onclick="calcularPromedio()"
               >
                 Calcular promedio
+              </button>
+
+              <button
+                type="button"
+                id="btnReset"
+                class="btn btn-primary mt-3"
+                onclick="reiniciarPagina()"
+              >
+                Reiniciar
               </button>
 
               <div id="pResultado" class="alert alert-info mt-4" role="alert">
