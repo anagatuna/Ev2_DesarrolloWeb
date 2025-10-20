@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 12</title>
+
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <h1>Práctica: Cambiar propiedades del texto</h1>
+  
+  <p id="texto">
+    Haz clic en este párrafo para cambiar su tamaño y color utilizando JavaScript.
+  </p>
+
+  <!-- JavaScript -->
+  <script>
+    const parrafo = document.getElementById("texto");
+
+    parrafo.addEventListener("click", function() {
+      // Alternar la clase 'grande' para activar o desactivar el cambio
+      parrafo.classList.toggle("grande");
+    });
+  </script>
+
+  <button id="toggle"><a href="../../../index.html">Regresar a Inicio</a></button>
+
+</body>
+</html>

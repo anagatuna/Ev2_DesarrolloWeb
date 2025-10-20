@@ -11,8 +11,8 @@ nav {
 }
 
 .nav-custom {
-  border-top: 1px solid #6bd9fd;
-  border-bottom: 1px solid #6bd9fd;
+  border-top: 1px solid #4682b4;
+  border-bottom: 1px solid #4682b4;
 }
 .nav-custom .nav-link {
   color: #333;
@@ -23,7 +23,7 @@ nav {
   padding-bottom: .25rem;
 }
 .nav-custom .nav-link:hover {
-  color: #6bd9fd;
+  color: #4682b4;
   opacity: .9;
 }
 
@@ -73,6 +73,10 @@ h2 {
 
 /* Cambiar tono del texto al hover (ligero efecto visual) */
 #caracteristicas .card:hover .card-title {
+  color: #4682b4;
+}
+
+#caracteristicas .card:hover svg{
   color: #4682b4;
 }
 
@@ -145,9 +149,11 @@ h2 {
 
 /* Principales aplicaciones */
 .img-container {
-  overflow: hidden;
+  width: 75%;
+  margin: 0 auto; 
   position: relative;
-  
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .img-container h3{
@@ -162,12 +168,13 @@ h2 {
 }
 
 .img-container img {
-  width: 70%;      /* reduce el ancho total */
-  height: auto;    /* mantiene proporción */
+  width: 100%;      
+  height: auto;    
   object-fit: cover;
-  margin: 0 auto;  /* centra la imagen */
+  margin: 0 auto;  
   display: block;
   transition: filter 0.5s ease-in-out;
+  border-radius: 5px;
 }
 
 .img-container:hover img {
@@ -181,7 +188,7 @@ h2 {
 }
 
 .img-container .overlay {
-  width: 70%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -200,6 +207,7 @@ h2 {
   text-shadow: 1px 4px 6px rgba(0,0,0,1);
   font-size: 1rem;
   margin: 10px 0 0;
+  padding: 2rem;
 }
 
 /* Aspectos relevantes */
@@ -320,4 +328,74 @@ h2 {
   border: 2px solid #323232;
   box-shadow: 4px 4px #323232;
   border-radius: 5px;
+}
+
+.table thead th {
+  background-color: #4682b4;
+  color: #fff;
+}
+
+.table tbody th {
+  text-align: center;     
+  vertical-align: middle; 
+}
+
+.btn-practicas {
+  background: #4682b4;
+  color: #fff;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  text-decoration: none; 
+  width: 35%;
+}
+
+.btn-practicas .icon {
+  background: #fff;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #35668d; 
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+/* Efecto hover: el círculo blanco se expande */
+.btn-practicas:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.btn-practicas .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #4682b4; 
+}
+
+.btn-practicas:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.btn-practicas:active .icon {
+  transform: scale(0.95);
+}
+
+/* Footer */
+.footer {
+  background-color: #4682b4;
+  color: #fff;
 }
