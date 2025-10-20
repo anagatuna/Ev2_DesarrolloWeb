@@ -1,0 +1,58 @@
+body{
+  background-color: #add8e6;
+  color: #3c3c3c;
+}
+
+.btn-regresar {
+  background: #4682b4;
+  color: #fff;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  text-decoration: none; 
+  width: 20%;
+}
+
+.btn-regresar .icon {
+  background: #fff;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #35668d; 
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+/* Efecto hover: el círculo blanco se expande */
+.btn-regresar:hover .icon{
+  width: calc(100% - 0.6em);
+}
+
+.btn-regresar .icon svg{
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #4682b4; 
+}
+
+.btn-regresar:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.btn-regresar:active .icon{
+  transform: scale(0.95);
+}

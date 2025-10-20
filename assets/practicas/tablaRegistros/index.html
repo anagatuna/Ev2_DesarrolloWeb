@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="es" translate="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de registros</title>
+    <!-- Referencia de Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Referencia a nuestro CSS para el botón de regresar -->
+    <link rel="stylesheet" href="/assets/css/btn-style.css">
 </head>
+
 <body>
-    <h1>Tabla de registros</h1>
-    <form action="">
-        <div id="area"></div>
-         <button class="btn btn-success" type="button" onclick="dataGridView()">EMPEZAR</button>
+    <main class="container border p-4 mt-5 rounded bg-white shadow-sm">
+        <section class="mt-3">
+            <a href="/index.html" target="_blank" class="btn-regresar">
+                Regresar a la página principal
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+        <section class="mt-3 text-center mb-4">
+            <h1>Tabla de registros</h1>
+            <form action="">
+                <div id="area"></div>
+                <button class="btn btn-success mt-4" type="button" onclick="dataGridView()">EMPEZAR</button>
+            </form>
 
-    </form>
+        </section>
 
-    <script type="text/JavaScript">
-        function dataGridView() {
-            let numero = parseInt(prompt('Ingrese un número de registros: '));
-            let nombre;
-            let i = 0;
-            let lista = '<table class = "table table-hover mt-4">';
+        <script type="text/JavaScript">
+            function dataGridView() {
+                let numero = parseInt(prompt('Ingrese un número de registros: '));
+                let nombre;
+                let i = 0;
+                let lista = '<table class = "table table-hover mt-4">';
+                
+                lista += '<tr><th>Id</th><th>Nombre</th><th></th></tr>';
+                
+                while (i < numero) {
+                  nombre = prompt('Ingrese un nombre: ');
+                  lista += '<tr><td>' + (i + 1) + '</td><td>' + nombre + '</td><td>' + '<button class="btn btn-danger">EDITAR</button> ' + '<button class="btn btn-info">ELIMINAR</button>' + '</td></tr>';
+                  i++;
+                }
             
-            lista += '<tr><th>Id</th><th>Nombre</th><th></th></tr>';
-            
-            while (i < numero) {
-              nombre = prompt('Ingrese un nombre: ');
-              lista += '<tr><td>' + (i + 1) + '</td><td>' + nombre + '</td><td>' + '<button class="btn btn-danger">EDITAR</button> ' + '<button class="btn btn-info">ELIMINAR</button>' + '</td></tr>';
-              i++;
+                lista += '</table><br>';
+                document.getElementById('area').innerHTML = lista;
             }
-        
-            lista += '</table><br>';
-            document.getElementById('area').innerHTML = lista;
-        }
-    </script>
+        </script>
+    </main>
 </body>
+
 </html>

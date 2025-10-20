@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="es" translate="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suma de pares e impares</title>
+    <!-- Referencia de Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Referencia a nuestro CSS para el botón de regresar -->
+    <link rel="stylesheet" href="/assets/css/btn-style.css">
 </head>
+
 <body>
-    <h1>Validar suma de pares e impares</h1>
-    <form action="">
-        <div id="area"></div>
-         <button class="btn btn-success" type="button" onclick="serie()">EMPEZAR</button>
+    <main class="container border p-4 mt-5 rounded bg-white shadow-sm">
+        <section class="mt-3">
+            <a href="/index.html" target="_blank" class="btn-regresar">
+                Regresar a la página principal
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+        <section class="mt-3 text-center mb-4">
+            <h1>Validar suma de pares e impares</h1>
+            <form action="">
+                <div id="area"></div>
+                <button class="btn btn-success mt-4" type="button" onclick="serie()">EMPEZAR</button>
 
-    </form>
+            </form>
+        </section>
 
-    <script type="text/JavaScript">
-        function serie() {
-            let bandera = 0; // Apagada
-            let numero;
-            let sumaPar = 0;
-            let sumaImpar = 0;
+        <script type="text/JavaScript">
+            function serie() {
+                let bandera = 0; // Apagada
+                let numero;
+                let sumaPar = 0;
+                let sumaImpar = 0;
 
-            while (bandera == 0) {
-                let numero = parseInt(prompt('Ingrese un número: '));
+                while (bandera == 0) {
+                    let numero = parseInt(prompt('Ingrese un número: '));
 
-                if (numero % 2 == 0){
-                    // El número es par
-                    sumaPar += numero;
-                    console.log(sumaPar)
-                } else {
-                    // Es impar
-                    sumaImpar += numero;
-                    console.log(sumaImpar)
+                    if (numero % 2 == 0){
+                        // El número es par
+                        sumaPar += numero;
+                        console.log(sumaPar)
+                    } else {
+                        // Es impar
+                        sumaImpar += numero;
+                        console.log(sumaImpar)
+                    }
+
+                    if (numero == 0) {
+                        bandera = 1; // Encendida, termina
+                    } else {
+                        bandera = 0; // Apagada, continua
+                    }
                 }
 
-                if (numero == 0) {
-                    bandera = 1; // Encendida, termina
-                } else {
-                    bandera = 0; // Apagada, continua
-                }
+                // Imprimir resultado
+                document.getElementById('area').innerText = 'La suma de numeros pares es: ' + sumaPar + ' y la suma de impares es: ' + sumaImpar;
             }
-
-            // Imprimir resultado
-            document.getElementById('area').innerText = 'La suma de numeros pares es: ' + sumaPar + ' y la suma de impares es: ' + sumaImpar;
-        }
-    </script>
+        </script>
+    </main>
 </body>
+
 </html>
