@@ -28,25 +28,23 @@ function generarNumeroAleatorio() {
 function revisarNumero() {
     const numeroIngresado = parseInt(inputNumero.value);
 
-    if (isNaN(numeroIngresado)) {
-        alert("Por favor, ingresa un número válido.");
-    }
-
-    intentosRestantes--;
-
     if (numeroIngresado === numeroAleatorio) {
         alert("¡Felicidades, lo lograste!");
         finalizarJuego();
     } else if (intentosRestantes > 0) {
-        
-        if (numeroIngresado < numeroAleatorio) {
+        if (isNaN(numeroIngresado)) {
+            alert('Ingrese un valor.')
+        } else if (numeroIngresado < numeroAleatorio) {
             alert(`El número secreto es MAYOR al que ingresaste. Te quedan ${intentosRestantes} intento(s).`);
+        intentosRestantes--;
         } else {
             alert(`El número secreto es MENOR al que ingresaste. Te quedan ${intentosRestantes} intento(s).`);
+        intentosRestantes--;
         }
-    } else {
-        alert(`Suerte para la próxima, el número secreto era ${numeroAleatorio}.`);
-        finalizarJuego();
+
+        } else {
+            alert(`Suerte para la próxima, el número secreto era ${numeroAleatorio}.`);
+            finalizarJuego();
     }
 
     inputNumero.value = "";
