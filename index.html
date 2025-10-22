@@ -19,30 +19,33 @@
 </head>
 
 <body>
-    <main class="container py-4">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg mb-4 nav-custom">
-            <div class="container justify-content-center">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#introduccion">Introducción</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#caracteristicas">Características</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#elementos">Elementos fundamentales</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link active" href="#aplicaciones">Principales
-                                aplicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#aspectos">Aspectos relevantes</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#enlaces">Enlaces Externos</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#ejercicios">Ejercicios</a></li>
+    <!-- Encabezado -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo_js.png" alt="Logo de JavaScript" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#elementos">Elementos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aplicaciones">Aplicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aspectos">Aspectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Enlaces</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ejercicios">Ejercicios</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </header>
 
+    <main class="container py-4">
         <!--Introducción -->
         <section id="introduccion" class="text-center my-5">
             <h1>Introducción al lenguaje de <span class="java-script">JavaScript</span></h1>
@@ -53,12 +56,13 @@
 
         <!-- Características -->
         <section id="caracteristicas" class="my-5">
-            <h2>Características</h2>
-            <div class="row g-4 m-2">
+            <h2 class="mb-5">Características</h2>
+
+            <div class="row g-5 gy-5">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-code-slash" viewBox="0 0 16 16">
                                     <path
@@ -67,7 +71,8 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Lenguaje interpretado y del lado del cliente</h5>
+                                    <h5 class="card-title text-center mb-3">Lenguaje interpretado y del lado del cliente
+                                    </h5>
                                     <p class="card-text">El código se ejecuta directamente en el navegador del usuario,
                                         lo que agiliza la respuesta de las páginas web sin necesidad de recargar.</p>
                                 </div>
@@ -75,10 +80,11 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
                                     <path
@@ -89,20 +95,20 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Multiparadigma</h5>
-                                    <p class="card-text">Es flexible y soporta varios estilos de programación, como
-                                        la programación orientada a objetos, la programación imperativa y,
-                                        especialmente,
+                                    <h5 class="card-title text-center mb-3">Multiparadigma</h5>
+                                    <p class="card-text">Es flexible y soporta varios estilos de programación, como la
+                                        programación orientada a objetos, la programación imperativa y, especialmente,
                                         la programación funcional.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-braces" viewBox="0 0 16 16">
                                     <path
@@ -111,23 +117,19 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Tipado dinámico</h5>
+                                    <h5 class="card-title text-center mb-3">Tipado dinámico</h5>
                                     <p class="card-text">No necesitas declarar el tipo de una variable (número, texto,
-                                        etc.)
-                                        al crearla. JavaScript lo determina automáticamente mientras se ejecuta el
-                                        programa,
-                                        lo que ofrece gran flexibilidad.</p>
+                                        etc.) al crearla. JavaScript lo determina automáticamente mientras se ejecuta el
+                                        programa, lo que ofrece gran flexibilidad.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row g-4 m-2">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-filetype-js" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -136,21 +138,20 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Basado en prototipos</h5>
+                                    <h5 class="card-title text-center mb-3">Basado en prototipos</h5>
                                     <p class="card-text">En lugar de clases (como en otros lenguajes), la herencia de
-                                        objetos
-                                        se realiza a través de prototipos, lo que permite que los objetos hereden
-                                        propiedades
-                                        y métodos de otros objetos.</p>
+                                        objetos se realiza a través de prototipos, lo que permite que los objetos
+                                        hereden propiedades y métodos de otros objetos.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-arrow-left-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -159,20 +160,20 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Asíncrono y "single-threaded"</h5>
+                                    <h5 class="card-title text-center mb-3">Asíncrono y "single-threaded"</h5>
                                     <p class="card-text">A pesar de ejecutar tareas en un solo hilo, puede manejar
-                                        operaciones asíncronas sin bloquear el resto del programa,
-                                        gracias a su "Event Loop". Esto es crucial para mantener la fluidez de
-                                        la interfaz de usuario.</p>
+                                        operaciones asíncronas sin bloquear el resto del programa, gracias a su "Event
+                                        Loop". Esto es crucial para mantener la fluidez de la interfaz de usuario.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-3 h-100">
+                    <div class="card h-100">
                         <div class="row g-0 h-100">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                     class="bi bi-globe-americas" viewBox="0 0 16 16">
                                     <path
@@ -181,23 +182,23 @@
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h5 class="card-title">Ecosistema enorme</h5>
+                                    <h5 class="card-title text-center mb-3">Ecosistema enorme</h5>
                                     <p class="card-text">Cuenta con una comunidad gigantesca y acceso a una inmensa
                                         cantidad de librerías (como React, Angular, Vue) y herramientas (como Node.js
-                                        para el backend)
-                                        que expanden sus capacidades a casi cualquier área del desarrollo de software.
-                                    </p>
+                                        para el backend) que expanden sus capacidades a casi cualquier área del
+                                        desarrollo de software.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Elementos Fundamentales -->
-        <section id="elementos" class="my-5 container">
-            <h2 class="mb-4">Elementos Fundamentales</h2>
+        <section id="elementos" class="my-5">
+            <h2 class="mb-5">Elementos Fundamentales</h2>
             <div class="row">
                 <div class="col-4">
                     <div class="list-group" id="list-tab" role="tablist">
@@ -346,10 +347,11 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
 
         <!-- Principales aplicaciones -->
         <section id="aplicaciones" class="my-5">
-            <h2>Principales aplicaciones</h2>
-            <h4>JavaScript es uno de los lenguajes más utilizados en el desarrollo web. Permite crear sitios
+            <h2 class="mb-3">Principales aplicaciones</h2>
+            <h5 class="mb-5">JavaScript es uno de los lenguajes más utilizados en el desarrollo web. Permite crear
+                sitios
                 interactivos, dinámicos y con gran capacidad de respuesta, siendo esencial tanto en el frontend como en
-                el backend.</h4>
+                el backend.</h5>
             <br>
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6">
@@ -403,7 +405,7 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
 
         <!-- Aspectos relevantes -->
         <section id="aspectos" class="my-5">
-            <h2>Aspectos Relevantes</h2>
+            <h2 class="mb-5 mt-5">Aspectos Relevantes</h2>
             <div class="accordion accordion-flush" id="accordionAspectos">
                 <!-- Ítem 1 -->
                 <div class="accordion-item">
@@ -464,7 +466,7 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
         <!-- Enlaces externos -->
         <section id="enlaces" class="my-5 ">
             <div class="container">
-                <h2 class="mb-3">Enlaces Externos</h2>
+                <h2 class="mb-2">Enlaces Externos</h2>
                 <p class="text-muted mb-5">Pasa el cursor sobre una tarjeta para ver más información</p>
 
                 <div class="row g-4 justify-content-center">
@@ -488,7 +490,8 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
                         <div class="card-enlaces mx-auto">
                             <div class="card-details">
                                 <p class="text-title">Manejo del DOM</p>
-                                <p class="text-body">Aprende cómo JavaScript puede modificar el contenido y los estilos en
+                                <p class="text-body">Aprende cómo JavaScript puede modificar el contenido y los estilos
+                                    en
                                     tiempo real.</p>
                             </div>
                             <button class="card-button"
@@ -503,7 +506,8 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
                         <div class="card-enlaces mx-auto">
                             <div class="card-details">
                                 <p class="text-title">Eventos en JavaScript</p>
-                                <p class="text-body">Descubre cómo responder a acciones del usuario, como clicks, movimientos del ratón, entre otros.</p>
+                                <p class="text-body">Descubre cómo responder a acciones del usuario, como clicks,
+                                    movimientos del ratón, entre otros.</p>
                             </div>
                             <button class="card-button"
                                 onclick="window.open('https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events', '_blank')">More
@@ -517,7 +521,8 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
                         <div class="card-enlaces mx-auto">
                             <div class="card-details">
                                 <p class="text-title">Videojuegos con JavaScript</p>
-                                <p class="text-body">Aprende de que manera podemos utilizar las funciones y eventos de JavaScript para crear videojuegos.</p>
+                                <p class="text-body">Aprende de que manera podemos utilizar las funciones y eventos de
+                                    JavaScript para crear videojuegos.</p>
                             </div>
                             <button class="card-button"
                                 onclick="window.open('https://developer.mozilla.org/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript', '_blank')">More
@@ -532,7 +537,7 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
 
         <!-- Ejercicios -->
         <section id="ejercicios" class="my-5">
-            <h2>Ejercicios</h2>
+            <h2 class="mb-5">Ejercicios</h2>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -797,6 +802,46 @@ document.getElementById("boton").addEventListener("click", () =&gt; {
             © Elaborado por Equipo 1
         </div>
     </footer>
+
+    <!-- Subrayado en la seccion activa -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-custom .nav-link');
+
+            // Función para actualizar qué enlace está activo
+            const setActiveLink = (id) => {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            };
+
+            if (window.scrollY < 100) {
+                setActiveLink('introduccion');
+            }
+
+            const observerOptions = {
+                rootMargin: '-40% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActiveLink(entry.target.id);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 
 </html>
