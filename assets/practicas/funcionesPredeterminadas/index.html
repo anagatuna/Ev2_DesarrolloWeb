@@ -8,13 +8,54 @@
 <body>
     <marquee>FUNCIONES DE JAVASCRIPT ....</marquee>
 
-    <script type="text/JavaScript">
-        document.write('Función abs del número - 10 es: <mark>' + Math.abs(-10) + ' </mark> el cual es el valor positivo del número');
+    <script type="text/javascript">
+        // Función Math.abs() (Valor absoluto)
+        document.write('Función abs del número -10 es: <mark>' + Math.abs(-10) + ' </mark> el cual es el valor positivo del número');
         document.write('<br>');
-        document.write('Función ceil del número 3.1416 es: <mark>' + Math.ceil(3.1416) + '</mark> el cual es un valor redondeado hacia arriba');
 
+        // Función Math.ceil() (Redondeo hacia arriba)
+        document.write('Función ceil del número 3.1416 es: <mark>' + Math.ceil(3.1416) + '</mark> el cual es un valor redondeado hacia arriba');
         document.write('<br>');
-        document.write('Función random me da un número aleatorio: <mark>' + Math.random() + '</mark>');
-</script>
+
+        // Función Math.random() (Número aleatorio)
+        document.write('Función random me da un número aleatorio entre 0 y 1: <mark>' + Math.random() + '</mark>');
+        document.write('<br>');
+
+        // Función Math.max() y Math.min() (Máximo y mínimo)
+        document.write('Función max entre 10, 20 y 30 es: <mark>' + Math.max(10, 20, 30) + '</mark>');
+        document.write('<br>');
+        document.write('Función min entre 10, 20 y 30 es: <mark>' + Math.min(10, 20, 30) + '</mark>');
+        document.write('<br>');
+
+        // Función Number.isNaN() (Verificar si es NaN)
+        document.write('Verificar si "abc" es NaN: <mark>' + Number.isNaN('abc') + '</mark> (Debería ser false)');
+        document.write('<br>');
+        document.write('Verificar si 123 es NaN: <mark>' + Number.isNaN(123) + '</mark> (Debería ser false)');
+        document.write('<br>');
+
+        // Función toFixed() (Formatear números)
+        var number = 3.14159;
+        document.write('Número 3.14159 con 2 decimales: <mark>' + number.toFixed(2) + '</mark>');
+        document.write('<br>');
+
+        // Función Date() (Obtener fecha y hora)
+        var fecha = new Date();
+        document.write('Fecha y hora actual es: <mark>' + fecha + '</mark>');
+        document.write('<br>');
+
+        // Función String.length (Longitud de una cadena)
+        var texto = "Hola Mundo";
+        document.write('La longitud de la cadena "Hola Mundo" es: <mark>' + texto.length + '</mark>');
+        document.write('<br>');
+
+        // Función String.toUpperCase() y String.toLowerCase() (Convertir a mayúsculas o minúsculas)
+        document.write('La cadena "Hola Mundo" en mayúsculas es: <mark>' + texto.toUpperCase() + '</mark>');
+        document.write('<br>');
+        document.write('La cadena "Hola Mundo" en minúsculas es: <mark>' + texto.toLowerCase() + '</mark>');
+        document.write('<br>');
+
+        // Función Math.floor() (Valor entero)
+        document.write('Función floor del número 3.1416 es: <mark>' + Math.floor(3.1416) + '</mark> el cual es el valor entero más cercano hacia abajo');
+    </script>
 </body>
 </html>
