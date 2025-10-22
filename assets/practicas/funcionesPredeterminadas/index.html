@@ -1,61 +1,148 @@
 <!DOCTYPE html>
 <html lang="es" translate="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio de funciones predeterminadas</title>
+    <!-- Referencia de Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Referencia a nuestro CSS para el botón de regresar -->
+    <link rel="stylesheet" href="/assets/css/btn-style.css">
 </head>
+
 <body>
-    <marquee>FUNCIONES DE JAVASCRIPT ....</marquee>
+    <main class="container border p-4 mt-5 mb-5 bg-white shadow-sm">
+        <section class="mt-3 mb-4">
+            <a href="/index.html" target="_blank" class="btn-regresar">
+                Regresar a la página principal
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+        <h1 class="mb-4 text-center">Laboratorio de Funciones Predefinidas en JavaScript</h1>
 
-    <script type="text/javascript">
-        // Función Math.abs() (Valor absoluto)
-        document.write('Función abs del número -10 es: <mark>' + Math.abs(-10) + ' </mark> el cual es el valor positivo del número');
-        document.write('<br>');
+        <div class="row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <strong>Función Math.abs() (Valor absoluto):</strong>
+                        <p>Función abs del número -10 es: <mark id="absResult"></mark> el cual es el valor positivo del
+                            número</p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Math.ceil() (Redondeo hacia arriba):</strong>
+                        <p>Función ceil del número 3.1416 es: <mark id="ceilResult"></mark> el cual es un valor
+                            redondeado hacia arriba</p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Math.random() (Número aleatorio):</strong>
+                        <p>Función random me da un número aleatorio entre 0 y 1: <mark id="randomResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Math.max() y Math.min() (Máximo y mínimo):</strong>
+                        <p>Función max entre 10, 20 y 30 es: <mark id="maxResult"></mark></p>
+                        <p>Función min entre 10, 20 y 30 es: <mark id="minResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Number.isNaN() (Verificar si es NaN):</strong>
+                        <p>Verificar si "abc" es NaN: <mark id="isNaNResult"></mark></p>
+                        <p>Verificar si 123 es NaN: <mark id="isNaNNumber"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función toFixed() (Formatear números):</strong>
+                        <p>Número 3.14159 con 2 decimales: <mark id="toFixedResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Date() (Obtener fecha y hora):</strong>
+                        <p>Fecha y hora actual es: <mark id="dateResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.length (Longitud de una cadena):</strong>
+                        <p>La longitud de la cadena "Hola Mundo" es: <mark id="lengthResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.toUpperCase() y String.toLowerCase() (Convertir a mayúsculas o
+                            minúsculas):</strong>
+                        <p>La cadena "Hola Mundo" en mayúsculas es: <mark id="upperCaseResult"></mark></p>
+                        <p>La cadena "Hola Mundo" en minúsculas es: <mark id="lowerCaseResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Math.floor() (Valor entero):</strong>
+                        <p>Función floor del número 3.1416 es: <mark id="floorResult"></mark> el cual es el valor entero
+                            más cercano hacia abajo</p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.charAt() (Carácter en una posición específica):</strong>
+                        <p>El carácter en la posición 2 de la cadena "Hola Mundo" es: <mark id="charAtResult"></mark>
+                        </p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.indexOf() (Índice de un carácter en una cadena):</strong>
+                        <p>El índice de la letra "M" en "Hola Mundo" es: <mark id="indexOfResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Array.push() (Añadir un elemento al final de un arreglo):</strong>
+                        <p>Arreglo después de añadir un valor con push: <mark id="pushResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Array.pop() (Eliminar el último elemento de un arreglo):</strong>
+                        <p>Arreglo después de eliminar el último valor con pop: <mark id="popResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Array.shift() (Eliminar el primer elemento de un arreglo):</strong>
+                        <p>Arreglo después de eliminar el primer valor con shift: <mark id="shiftResult"></mark></p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función Array.unshift() (Añadir un elemento al inicio de un arreglo):</strong>
+                        <p>Arreglo después de añadir un valor al inicio con unshift: <mark id="unshiftResult"></mark>
+                        </p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.substring() (Extraer una subcadena de una cadena):</strong>
+                        <p>Subcadena de "Hola Mundo" desde la posición 0 hasta la 4: <mark id="substringResult"></mark>
+                        </p>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Función String.replace() (Reemplazar una subcadena en una cadena):</strong>
+                        <p>La cadena "Hola Mundo" después de reemplazar "Mundo" por "JavaScript" es: <mark
+                                id="replaceResult"></mark></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
-        // Función Math.ceil() (Redondeo hacia arriba)
-        document.write('Función ceil del número 3.1416 es: <mark>' + Math.ceil(3.1416) + '</mark> el cual es un valor redondeado hacia arriba');
-        document.write('<br>');
-
-        // Función Math.random() (Número aleatorio)
-        document.write('Función random me da un número aleatorio entre 0 y 1: <mark>' + Math.random() + '</mark>');
-        document.write('<br>');
-
-        // Función Math.max() y Math.min() (Máximo y mínimo)
-        document.write('Función max entre 10, 20 y 30 es: <mark>' + Math.max(10, 20, 30) + '</mark>');
-        document.write('<br>');
-        document.write('Función min entre 10, 20 y 30 es: <mark>' + Math.min(10, 20, 30) + '</mark>');
-        document.write('<br>');
-
-        // Función Number.isNaN() (Verificar si es NaN)
-        document.write('Verificar si "abc" es NaN: <mark>' + Number.isNaN('abc') + '</mark> (Debería ser false)');
-        document.write('<br>');
-        document.write('Verificar si 123 es NaN: <mark>' + Number.isNaN(123) + '</mark> (Debería ser false)');
-        document.write('<br>');
-
-        // Función toFixed() (Formatear números)
-        var number = 3.14159;
-        document.write('Número 3.14159 con 2 decimales: <mark>' + number.toFixed(2) + '</mark>');
-        document.write('<br>');
-
-        // Función Date() (Obtener fecha y hora)
-        var fecha = new Date();
-        document.write('Fecha y hora actual es: <mark>' + fecha + '</mark>');
-        document.write('<br>');
-
-        // Función String.length (Longitud de una cadena)
-        var texto = "Hola Mundo";
-        document.write('La longitud de la cadena "Hola Mundo" es: <mark>' + texto.length + '</mark>');
-        document.write('<br>');
-
-        // Función String.toUpperCase() y String.toLowerCase() (Convertir a mayúsculas o minúsculas)
-        document.write('La cadena "Hola Mundo" en mayúsculas es: <mark>' + texto.toUpperCase() + '</mark>');
-        document.write('<br>');
-        document.write('La cadena "Hola Mundo" en minúsculas es: <mark>' + texto.toLowerCase() + '</mark>');
-        document.write('<br>');
-
-        // Función Math.floor() (Valor entero)
-        document.write('Función floor del número 3.1416 es: <mark>' + Math.floor(3.1416) + '</mark> el cual es el valor entero más cercano hacia abajo');
-    </script>
+        <!-- Código JavaScript -->
+        <script type="text/javascript">
+            document.getElementById("absResult").innerHTML = Math.abs(-10);
+            document.getElementById("ceilResult").innerHTML = Math.ceil(3.1416);
+            document.getElementById("randomResult").innerHTML = Math.random();
+            document.getElementById("maxResult").innerHTML = Math.max(10, 20, 30);
+            document.getElementById("minResult").innerHTML = Math.min(10, 20, 30);
+            document.getElementById("isNaNResult").innerHTML = Number.isNaN('abc');
+            document.getElementById("isNaNNumber").innerHTML = Number.isNaN(123);
+            document.getElementById("toFixedResult").innerHTML = (3.14159).toFixed(2);
+            document.getElementById("dateResult").innerHTML = new Date();
+            document.getElementById("lengthResult").innerHTML = "Hola Mundo".length;
+            document.getElementById("upperCaseResult").innerHTML = "Hola Mundo".toUpperCase();
+            document.getElementById("lowerCaseResult").innerHTML = "Hola Mundo".toLowerCase();
+            document.getElementById("floorResult").innerHTML = Math.floor(3.1416);
+            document.getElementById("charAtResult").innerHTML = "Hola Mundo".charAt(2);
+            document.getElementById("indexOfResult").innerHTML = "Hola Mundo".indexOf("M");
+            document.getElementById("pushResult").innerHTML = [1, 2, 3].concat(4);
+            document.getElementById("popResult").innerHTML = [1, 2, 3].slice(0, -1);
+            document.getElementById("shiftResult").innerHTML = [1, 2, 3].slice(1);
+            document.getElementById("unshiftResult").innerHTML = [1, 2, 3].unshift(0);
+            document.getElementById("substringResult").innerHTML = "Hola Mundo".substring(0, 4);
+            document.getElementById("replaceResult").innerHTML = "Hola Mundo".replace("Mundo", "JavaScript");
+        </script>
 </body>
+
 </html>
