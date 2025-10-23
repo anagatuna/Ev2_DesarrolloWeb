@@ -31,6 +31,7 @@
             <form action="">
                 <div id="area"></div>
                 <button class="btn btn-success mt-4" type="button" onclick="serie()">EMPEZAR</button>
+                <button class="btn btn-secondary mt-4" type="reset" onclick="Reinicio()">LIMPIAR</button>
 
             </form>
         </section>
@@ -64,6 +65,9 @@
 
                 // Imprimir resultado
                 document.getElementById('area').innerText = 'La suma de numeros pares es: ' + sumaPar + ' y la suma de impares es: ' + sumaImpar;
+            }
+            function Reinicio() { //recarga la pagina
+                location.reload();
             }
         </script>
     </main>
