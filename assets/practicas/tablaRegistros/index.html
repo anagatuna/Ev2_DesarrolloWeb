@@ -31,6 +31,7 @@
             <form action="">
                 <div id="area"></div>
                 <button class="btn btn-success mt-4" type="button" onclick="dataGridView()">EMPEZAR</button>
+                <button class="btn btn-secondary mt-4" type="reset" onclick="Reinicio()">LIMPIAR</button>
             </form>
 
         </section>
@@ -52,6 +53,9 @@
             
                 lista += '</table><br>';
                 document.getElementById('area').innerHTML = lista;
+            }
+            function Reinicio() { //recarga la pagina
+              location.reload();
             }
         </script>
     </main>
