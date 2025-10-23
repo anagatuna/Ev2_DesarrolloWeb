@@ -1,14 +1,14 @@
 let votacion = true;
-let votos = { 
-    Hiram: 0, 
-    Angel: 0, 
-    Omar: 0 
+let votos = {
+  Hiram: 0,
+  Angel: 0,
+  Omar: 0
 };
 let nulos = 0;
-const mapa = { 
-    1: "Hiram", 
-    2: "Angel", 
-    3: "Omar" 
+const mapa = {
+  1: "Hiram",
+  2: "Angel",
+  3: "Omar"
 };
 let empate = false, solo = []; // modo desempate y candidatos empatados
 
@@ -23,20 +23,20 @@ function ConteoVotos() {
     return alert("Voto inválido (usa 1, 2 o 3).");
   }
   const cand = mapa[v]; //nombre del candidato elegido
-  
+
   if (empate && !solo.includes(cand)) { //si empate es true Y se vota por un candidato que no empató, se rechaza el voto
     return alert("Desempate: vota entre " + solo.join(" y "));
   }
   votos[cand]++; //se agrega el voto al candidato elegido
   alert("Voto para " + cand);
-  
+
   if (empate) { // si estamos en desempate 
     const top = ganadorYEmpate(); //examina el ganador
     if (top.empate) {
       return; // El desempate continúa, no terminamos la votación aún
     } else {
       // Si no hay empate, finalizamos la votación y mostramos los resultados
-      votacion = false; 
+      votacion = false;
       return mostrarResultados();
     }
   }
@@ -50,7 +50,7 @@ function fin() {
     return alert("Empate entre " + solo.join(" y ") + ". Ingresa un voto extra para desempatar.");
   } else {
     // Si no hay empate, terminamos la votación y mostramos los resultados
-    votacion = false; 
+    votacion = false;
     mostrarResultados();
   }
 }
@@ -74,6 +74,6 @@ function ganadorYEmpate() {
   return { max, lista, total, empate: lista.length > 1 }; //si hay mas de un candidato, significa que hay un empate
 }
 
-function Reinicio(){ //recarga la pagina
+function Reinicio() { //recarga la pagina
   location.reload();
 }

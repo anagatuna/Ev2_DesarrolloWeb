@@ -1,4 +1,3 @@
-
 const inputNumero = document.getElementById("txtNumeroIngresado");
 const btnRevisar = document.getElementById("revisarNumero");
 const btnGenerar = document.getElementById("numeroAleatorio");
@@ -23,7 +22,6 @@ function generarNumeroAleatorio() {
     
     console.log("Número secreto para pruebas:", numeroAleatorio);
 }
-
 
 function revisarNumero() {
     const numeroIngresado = parseInt(inputNumero.value);
