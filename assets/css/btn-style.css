@@ -1,10 +1,10 @@
 body{
-  background-color: #add8e6;
+  background-color: #f0f0f0;
   color: #3c3c3c;
 }
 
 .btn-regresar {
-  background: #4682b4;
+  background: #5A695E;
   color: #fff;
   padding: 0.35em;
   padding-left: 1.2em;
@@ -33,7 +33,7 @@ body{
   height: 2.2em;
   width: 2.2em;
   border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #35668d; 
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #728376; 
   right: 0.3em;
   transition: all 0.3s;
 }
@@ -46,7 +46,7 @@ body{
 .btn-regresar .icon svg{
   width: 1.1em;
   transition: transform 0.3s;
-  color: #4682b4; 
+  color: #5A695E; 
 }
 
 .btn-regresar:hover .icon svg {

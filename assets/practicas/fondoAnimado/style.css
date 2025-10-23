@@ -6,8 +6,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: radial-gradient(#333, #000);
-  color: slategray;
+  background: #f0f0f0;
+  color: #5A695E;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
 }
 
@@ -75,8 +75,9 @@ img[src*="pusheen-7"] {
   mix-blend-mode: multiply;
 }
 
+/*  Botón Regresar */
 .btn-regresar {
-  background: #4682b4;
+  background: #5A695E;
   color: #fff;
   padding: 0.35em;
   padding-left: 1.2em;
@@ -84,15 +85,14 @@ img[src*="pusheen-7"] {
   font-weight: 500;
   border-radius: 0.9em;
   border: none;
-  display: flex;
+  display: inline-flex; 
   align-items: center;
   overflow: hidden;
   position: relative;
   height: 2.8em;
   padding-right: 3.3em;
   cursor: pointer;
-  text-decoration: none; 
-  width: 20%;
+  text-decoration: none;
 }
 
 .btn-regresar .icon {
@@ -105,26 +105,25 @@ img[src*="pusheen-7"] {
   height: 2.2em;
   width: 2.2em;
   border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #35668d; 
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #728376;
   right: 0.3em;
   transition: all 0.3s;
 }
 
-/* Efecto hover: el círculo blanco se expande */
-.btn-regresar:hover .icon{
+.btn-regresar:hover .icon {
   width: calc(100% - 0.6em);
 }
 
-.btn-regresar .icon svg{
+.btn-regresar .icon svg {
   width: 1.1em;
   transition: transform 0.3s;
-  color: #4682b4; 
+  color: #5A695E;
 }
 
 .btn-regresar:hover .icon svg {
   transform: translateX(0.1em);
 }
 
-.btn-regresar:active .icon{
+.btn-regresar:active .icon {
   transform: scale(0.95);
 }

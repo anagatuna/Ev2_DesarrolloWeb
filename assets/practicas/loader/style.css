@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh; 
   margin: 0;
-  background: #add8e6;
+  background: #f0f0f0;
 }
 
 .wheel-and-hamster {
@@ -312,57 +312,55 @@ body {
   max-width: 800px; 
 }
 
-/* --- Botón Regresar (MODIFICADO) --- */
+/*  Botón Regresar */
 .btn-regresar {
-    background: #4682b4;
-    color: #fff;
-    padding: 0.35em;
-    padding-left: 1.2em;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 0.9em;
-    border: none;
-    /* CAMBIO 1: display: inline-flex */
-    display: inline-flex; /* Permite que text-center lo centre */
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    height: 2.8em;
-    padding-right: 3.3em;
-    cursor: pointer;
-    text-decoration: none;
-    /* CAMBIO 2: Se quitó width: 20% */
+  background: #5A695E;
+  color: #fff;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  display: inline-flex; /* Permite que text-center lo centre */
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-regresar .icon {
-    background: #fff;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #35668d;
-    right: 0.3em;
-    transition: all 0.3s;
+  background: #fff;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #728376;
+  right: 0.3em;
+  transition: all 0.3s;
 }
 
 .btn-regresar:hover .icon {
-    width: calc(100% - 0.6em);
+  width: calc(100% - 0.6em);
 }
 
 .btn-regresar .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: #4682b4;
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #5A695E;
 }
 
 .btn-regresar:hover .icon svg {
-    transform: translateX(0.1em);
+  transform: translateX(0.1em);
 }
 
 .btn-regresar:active .icon {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
