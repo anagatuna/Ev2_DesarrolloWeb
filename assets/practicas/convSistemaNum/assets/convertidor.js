@@ -4,12 +4,10 @@ function Conversion() {
   let resultado = document.getElementById("txtResultado");
 
   //Validacion
-
     if (num === 0){
         resultado.value = 0;
         return;
     }
-
   //Conversion
     while (num > 0) {
         let residuo = num % 2; // último bit, 0 o 1
@@ -19,7 +17,10 @@ function Conversion() {
     while (binario.length < 4) {
         binario = "0" + binario;
     }
-
   //Resultado
   document.getElementById("txtResultado").value = binario;
+}
+
+function Reinicio(){
+  location.reload();
 }

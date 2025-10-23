@@ -1,14 +1,14 @@
 let votacion = true;
 let votos = { 
-    hiram: 0, 
-    angel: 0, 
-    omar: 0 
+    Hiram: 0, 
+    Angel: 0, 
+    Omar: 0 
 };
 let nulos = 0;
 const mapa = { 
-    1: "hiram", 
-    2: "angel", 
-    3: "omar" 
+    1: "Hiram", 
+    2: "Angel", 
+    3: "Omar" 
 };
 let empate = false, solo = []; // modo desempate y candidatos empatados
 
@@ -57,7 +57,7 @@ function fin() {
 
 function mostrarResultados() {
   const { total, lista, max } = ganadorYEmpate();
-  let msj = `Resultados:\n  hiram: ${votos.hiram}\n  angel: ${votos.angel}\n  omar: ${votos.omar}\n  Total: ${total}\n nulos: ${nulos}\n \n`;
+  let msj = `Resultados:\n  Hiram: ${votos.Hiram}\n  Angel: ${votos.Angel}\n  Omar: ${votos.Omar}\n  Total: ${total}\n Nulos: ${nulos}\n \n`;
   if (lista.length === 1) {
     const g = lista[0], porcentaje = Math.round((votos[g] / total) * 100); //el primer elemento del array
     msj += `Ganador: ${g} con ${votos[g]} voto(s)\nAceptación: ${porcentaje}%`;
@@ -68,8 +68,12 @@ function mostrarResultados() {
 }
 
 function ganadorYEmpate() {
-  const max = Math.max(votos.hiram, votos.angel, votos.omar); //conteo de votos
+  const max = Math.max(votos.Hiram, votos.Angel, votos.Omar); //conteo de votos
   const lista = Object.keys(votos).filter(k => votos[k] === max && max > 0); // itera entre cada candidato, agrega el que tiene la mayor cantidad de votos 
-  const total = votos.hiram + votos.angel + votos.omar; //total de votos
+  const total = votos.Hiram + votos.Angel + votos.Omar; //total de votos
   return { max, lista, total, empate: lista.length > 1 }; //si hay mas de un candidato, significa que hay un empate
+}
+
+function Reinicio(){ //recarga la pagina
+  location.reload();
 }
