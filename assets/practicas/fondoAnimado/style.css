@@ -26,7 +26,7 @@ h2 {
   text-align: center;
 }
 
-/* ===== Capas ===== */
+/* Capas */
 .pusheen-layer,
 .pusheen-layer1,
 .pusheen-layer2 {
@@ -40,10 +40,9 @@ h2 {
 .pusheen-layer2 div {
   position: absolute;
   display: block;
-  /* La posición 'top' y 'left' será controlada por JavaScript */
 }
 
-/* Tamaño base (unificado) */
+/* Tamaño base de las imagenes*/
 .pusheen-layer img,
 .pusheen-layer1 img,
 .pusheen-layer2 img {
@@ -65,12 +64,10 @@ img[src*="pusheen-7"] {
   --zoom: 1.45;
 }
 
-/* La capa 2 sigue rotada, ¡pero el JS la moverá correctamente! */
 .pusheen-layer1 {
   transform: rotateX(180deg);
 }
 
-/* Si tus PNG no son realmente transparentes */
 .fake-transparent img {
   mix-blend-mode: multiply;
 }

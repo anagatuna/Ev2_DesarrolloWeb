@@ -104,14 +104,12 @@ h2 {
   text-align: justify;
 }
 
-/* Efecto al pasar el mouse */
 #caracteristicas .card:hover {
   border-color: #5A695E;
   box-shadow: 4px 4px #5A695E, 0 6px 18px rgba(0, 0, 0, 0.15);
   transform: translateY(-6px);
 }
 
-/* Ajuste opcional: transiciones más suaves en el texto */
 #caracteristicas .card-title,
 #caracteristicas .card-text {
   transition: color 0.3s ease;
@@ -121,7 +119,6 @@ h2 {
   color: #49524A;
 }
 
-/* Cambiar tono del texto al hover (ligero efecto visual) */
 #caracteristicas .card:hover .card-title {
   color: #5A695E;
 }

@@ -1,7 +1,7 @@
 // Espera a que el documento HTML esté completamente cargado.
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Array para almacenar el estado (posición, velocidad) de cada elemento.
+    // Array para almacenar la posición de cada elemento.
     const elements = [];
     const screenHeight = window.innerHeight;
     const screenWidth = window.innerWidth;
@@ -16,26 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
             x: Math.random() * screenWidth,  // Posición 'x' inicial
             speed: 1 + Math.random() * 2,     // Velocidad de caída
             rotation: Math.random() * 360,    // Rotación inicial
-            rotationSpeed: (Math.random() - 0.5) * 2 // Velocidad de rotación (pos/neg)
+            rotationSpeed: (Math.random() - 0.5) * 2 // Velocidad de rotación
         });
     });
 
-    // Define la función principal del bucle de animación.
+    // Bucle para hacer la animación
     function animate() {
 
-        // Itera sobre cada elemento en el array para actualizar su estado.
+        // Itera sobre cada elemento en el array para actualizar su estado
         elements.forEach(item => {
 
-            // Actualiza la posición vertical y la rotación.
+            // Actualiza la posición vertical y la rotación
             item.y += item.speed;
             item.rotation += item.rotationSpeed;
 
-            // Aplica los cambios al DOM usando 'transform' para mejor rendimiento.
+            // Aplica los cambios al DOM usando 'transform' para mejor rendimiento
             item.element.style.transform = `translate(${item.x}px, ${item.y}px) rotate(${item.rotation}deg)`;
 
             // Comprueba si el elemento salió de la pantalla por la parte inferior.
-            if (item.y > screenHeight + 100) { // +100px de búfer
-                // Reinicia el elemento arriba (fuera de vista) y en una nueva posición 'x'.
+            if (item.y > screenHeight + 100) { 
+                // Reinicia el elemento arriba en una nueva posición 'x'.
                 item.y = -100;
                 item.x = Math.random() * screenWidth;
             }
